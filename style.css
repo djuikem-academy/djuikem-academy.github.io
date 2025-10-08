@@ -61,7 +61,7 @@ nav a:hover {
               url('images/math-bg.jpg') center/cover;
   color: white;
   text-align: center;
-  padding: 60px 20px;        /* ← réduit la hauteur (au lieu de 100px) */
+  padding: 60px 20px; /* réduit la hauteur */
 }
 
 .hero-text {
@@ -71,7 +71,7 @@ nav a:hover {
 
 .hero h2 {
   font-family: 'Poppins', sans-serif;
-  font-size: 1.8em;          /* légèrement plus petit */
+  font-size: 1.8em;
   font-weight: 600;
   margin-bottom: 15px;
 }
@@ -96,7 +96,6 @@ nav a:hover {
   background-color: #b7950b;
   transform: translateY(-4px);
 }
-
 
 /* --- Sections générales --- */
 .section {
@@ -149,13 +148,12 @@ nav a:hover {
   box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
 
-
 /* --- Section Impact horizontale (bulles + images côte à côte) --- */
 .impact-horizontal {
   display: flex;
   justify-content: space-around;
   align-items: flex-start;
-  flex-wrap: wrap; /* permet de repasser en colonne sur petit écran */
+  flex-wrap: wrap; /* repasse en colonne sur petit écran */
   gap: 40px;
   margin-top: 30px;
 }
@@ -216,6 +214,27 @@ nav a:hover {
   font-size: 0.8em;
   font-weight: 600;
   color: var(--violet);
+}
+
+/* --- Contact --- */
+.socials a {
+  color: var(--violet);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.socials a:hover {
+  color: var(--doré);
+}
+
+/* --- Footer --- */
+footer {
+  background-color: var(--violet);
+  color: white;
+  text-align: center;
+  padding: 15px 0;
+  margin-top: 40px;
+  font-size: 0.9em;
 }
 
 /* --- Responsive (mobile) --- */
@@ -282,5 +301,3 @@ nav a:hover {
   }
 }
 
-
-}
