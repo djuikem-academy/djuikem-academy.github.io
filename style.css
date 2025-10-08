@@ -57,36 +57,46 @@ nav a:hover {
 
 /* --- Section Hero --- */
 .hero {
-  background: linear-gradient(rgba(125,60,152,0.8), rgba(125,60,152,0.8)), url('images/math-bg.jpg') center/cover;
+  background: linear-gradient(rgba(125,60,152,0.85), rgba(125,60,152,0.85)),
+              url('images/math-bg.jpg') center/cover;
   color: white;
   text-align: center;
-  padding: 100px 20px;
+  padding: 60px 20px;        /* ← réduit la hauteur (au lieu de 100px) */
+}
+
+.hero-text {
+  max-width: 800px;
+  margin: 0 auto;
 }
 
 .hero h2 {
   font-family: 'Poppins', sans-serif;
-  font-size: 2em;
+  font-size: 1.8em;          /* légèrement plus petit */
+  font-weight: 600;
+  margin-bottom: 15px;
 }
 
 .hero p {
-  font-size: 1.2em;
-  margin-top: 10px;
+  font-size: 1.1em;
+  margin-bottom: 20px;
+  line-height: 1.5;
 }
 
-.btn {
-  display: inline-block;
+.hero .btn {
   background-color: var(--doré);
   color: var(--gris);
-  padding: 10px 20px;
-  margin-top: 20px;
+  padding: 10px 22px;
   border-radius: 25px;
   text-decoration: none;
   font-weight: 600;
+  transition: background-color 0.3s, transform 0.3s;
 }
 
-.btn:hover {
+.hero .btn:hover {
   background-color: #b7950b;
+  transform: translateY(-4px);
 }
+
 
 /* --- Sections générales --- */
 .section {
