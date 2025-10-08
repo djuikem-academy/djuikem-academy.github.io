@@ -19,11 +19,13 @@ body {
 header {
   background: 
     linear-gradient(rgba(125,60,152,0.9), rgba(125,60,152,0.9)), 
-    url('images/djuikem-academy.svg') center/cover no-repeat;
+    url('images/djuikem-academy.svg') center/contain no-repeat;
+  background-color: var(--violet);
   color: white;
   padding: 15px 0;
   box-shadow: 0 2px 6px rgba(0,0,0,0.2);
 }
+
 
 
 header .container {
