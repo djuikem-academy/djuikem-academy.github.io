@@ -8,6 +8,16 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Open+Sans&display=swap" rel="stylesheet">
 </head>
 
+  <script>
+document.addEventListener("DOMContentLoaded", () => {
+  const bubbles = document.querySelectorAll(".bubble");
+  bubbles.forEach((bubble, index) => {
+    bubble.style.animationDelay = `${index * 0.3}s`;
+  });
+});
+</script>
+
+
 <body>
 
   <!-- Barre de navigation -->
