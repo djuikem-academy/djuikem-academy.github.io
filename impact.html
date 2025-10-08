@@ -8,7 +8,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Open+Sans&display=swap" rel="stylesheet">
 
   <style>
-    /* --- Hero spécifique à la page Impact --- */
+    /* --- Hero --- */
     .hero-impact {
       background: 
         linear-gradient(rgba(125,60,152,0.75), rgba(125,60,152,0.75)),
@@ -23,29 +23,22 @@
       animation: fadeIn 1.5s ease-in;
     }
 
-    .hero-impact .hero-text {
-      max-width: 700px;
-      margin: 0 auto;
+    .hero-text {
+      max-width: 750px;
       backdrop-filter: blur(3px);
       animation: slideUp 1.2s ease-out;
     }
 
-    /* --- Animations globales --- */
-    @keyframes fadeIn {
-      from { opacity: 0; }
-      to { opacity: 1; }
-    }
+    /* --- Animations --- */
+    @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+    @keyframes slideUp { from { transform: translateY(40px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
 
-    @keyframes slideUp {
-      from { transform: translateY(40px); opacity: 0; }
-      to { transform: translateY(0); opacity: 1; }
-    }
-
-    /* --- Section sur le terrain --- */
+    /* --- Section principale --- */
     .impact-section {
+      width: 85%;
+      margin: 60px auto;
       text-align: center;
-      padding: 60px 20px;
-      animation: fadeIn 1.5s ease-in;
+      animation: fadeIn 1.6s ease-in;
     }
 
     .impact-section h2 {
@@ -56,21 +49,47 @@
 
     .impact-section p {
       max-width: 850px;
-      margin: 0 auto 40px auto;
+      margin: 0 auto 30px;
       line-height: 1.7;
     }
 
-    /* --- Galerie photos --- */
+    /* --- Bulles --- */
+    .impact-bubbles {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 15px;
+      margin: 30px 0;
+      animation: slideUp 1.6s ease-out;
+    }
+
+    .bubble {
+      background: var(--lavande);
+      color: white;
+      font-weight: 600;
+      border-radius: 50px;
+      padding: 0.9rem 1.5rem;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      transition: transform 0.3s, background-color 0.3s;
+    }
+
+    .bubble:hover {
+      transform: translateY(-6px) scale(1.05);
+      background: var(--doré);
+      color: var(--gris);
+    }
+
+    /* --- Galerie --- */
     .gallery {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
       gap: 25px;
-      animation: slideUp 1.6s ease-out;
+      margin-top: 30px;
     }
 
     .gallery figure {
-      width: 280px;
+      width: 260px;
       text-align: center;
       border-radius: 12px;
       overflow: hidden;
@@ -80,8 +99,8 @@
     }
 
     .gallery figure:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 8px 16px rgba(125,60,152,0.2);
+      transform: translateY(-6px);
+      box-shadow: 0 8px 16px rgba(125,60,152,0.25);
     }
 
     .gallery img {
@@ -94,23 +113,30 @@
       padding: 10px;
       font-weight: 600;
       color: var(--violet);
-      background-color: #f5f2f8;
+      background-color: #f9f7fb;
     }
 
     /* --- Impact numérique --- */
     .digital-impact {
-      background-color: var(--lavande);
+      background: linear-gradient(120deg, #C39BD3, #D4AC0D);
       color: white;
       padding: 60px 20px;
-      border-radius: 15px;
-      margin: 60px auto;
+      border-radius: 20px;
+      margin: 80px auto;
       width: 85%;
       animation: fadeIn 1.8s ease-in;
     }
 
     .digital-impact h3 {
       font-size: 1.6em;
-      margin-bottom: 15px;
+      margin-bottom: 10px;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    .digital-impact p {
+      max-width: 750px;
+      margin: 0 auto 25px;
+      line-height: 1.6;
     }
 
     .social-impact {
@@ -118,7 +144,7 @@
       justify-content: center;
       gap: 20px;
       flex-wrap: wrap;
-      margin-top: 20px;
+      margin-top: 15px;
     }
 
     .social-impact a {
@@ -128,21 +154,20 @@
       border-radius: 25px;
       text-decoration: none;
       font-weight: 600;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
       transition: all 0.3s ease;
     }
 
     .social-impact a:hover {
       background-color: var(--doré);
       color: var(--gris);
-      transform: translateY(-4px);
+      transform: translateY(-3px);
     }
 
     /* --- Bénévolat --- */
     .benevolat {
       text-align: center;
       margin-top: 80px;
-      animation: slideUp 1.8s ease-out;
+      animation: slideUp 1.9s ease-out;
     }
 
     .benevolat h3 {
@@ -152,7 +177,7 @@
 
     .benevolat p {
       max-width: 700px;
-      margin: 0 auto 25px auto;
+      margin: 0 auto 25px;
       line-height: 1.6;
     }
 
@@ -191,21 +216,32 @@
     </div>
   </header>
 
-  <!-- Bannière Hero -->
+  <!-- Hero -->
   <section class="hero-impact">
     <div class="hero-text">
       <h2>Notre impact & nos engagements 🌍</h2>
-      <p>Inspirer, enseigner et éveiller la curiosité scientifique — au Cameroun, en France, au Canada et en ligne.</p>
+      <p>Semer la passion des mathématiques, éveiller les esprits, connecter les continents.</p>
     </div>
   </section>
 
-  <!-- Section terrain -->
+  <!-- Bulles principales -->
+  <section class="impact-section">
+    <div class="impact-bubbles">
+      <div class="bubble">💜 500+ élèves inspirés</div>
+      <div class="bubble">🌍 Cameroun • France • Canada</div>
+      <div class="bubble">💛 120 000+ abonnés en ligne</div>
+      <div class="bubble">📘 30+ ateliers et webinaires éducatifs</div>
+      <div class="bubble">✨ 3 langues d’enseignement</div>
+    </div>
+  </section>
+
+  <!-- Sur le terrain -->
   <section class="impact-section">
     <h2>🟣 Actions sur le terrain</h2>
     <p>
-      Depuis 2023, <strong>Djuikem Academy</strong> mène des activités d’enseignement et d’inspiration en mathématiques
-      auprès de plus de <strong>500 élèves</strong> au Cameroun, en France et au Canada.
-      Ces ateliers permettent aux enfants — surtout aux jeunes filles — de découvrir la beauté des sciences et de gagner confiance en eux.
+      Depuis 2023, <strong>Djuikem Academy</strong> intervient dans des écoles, bibliothèques et espaces communautaires,
+      pour redonner vie aux mathématiques à travers des activités ludiques et humaines.  
+      Ces moments favorisent la confiance, la curiosité et le rêve scientifique chez les jeunes.
     </p>
 
     <div class="gallery">
@@ -228,12 +264,12 @@
   <section class="digital-impact">
     <h3>💻 Notre impact numérique</h3>
     <p>
-      À travers nos vidéos, publications et livres numériques, nous partageons la passion des mathématiques
-      avec une communauté de plus de <strong>120 000 abonnés</strong> répartis dans plus de 100 pays.
+      Grâce aux réseaux et aux outils en ligne, nos vidéos et publications touchent une communauté internationale passionnée.
+      Ensemble, nous rendons la science plus accessible, inclusive et inspirante.
     </p>
 
     <div class="social-impact">
-      <a href="https://www.youtube.com/@tiohacademy" target="_blank">📺 Chaîne YouTube</a>
+      <a href="https://www.youtube.com/@tiohacademy" target="_blank">📺 YouTube</a>
       <a href="https://www.linkedin.com/in/clotilde-djuikem-8186901a0/" target="_blank">💼 LinkedIn</a>
       <a href="https://djuikem-academy.github.io" target="_blank">🌐 Site web</a>
     </div>
@@ -243,11 +279,11 @@
   <section class="benevolat">
     <h3>🤝 Devenir bénévole</h3>
     <p>
-      Vous partagez notre passion pour l’éducation, la science ou la communication ?
-      Rejoignez notre réseau de bénévoles pour contribuer à nos projets — sur le terrain ou à distance
-      (traduction, graphisme, animation, communication…).
+      Vous souhaitez contribuer à la diffusion des sciences et de l’éducation ?  
+      Rejoignez une équipe dynamique de bénévoles qui partagent la même vision :  
+      <em>inspirer pour transformer</em>.
     </p>
-    <a href="https://forms.gle/TON_LIEN_GOOGLE_FORM" target="_blank" class="btn-benevole">🌍 Rejoindre l’aventure</a>
+    <a href="https://forms.gle/TON_LIEN_GOOGLE_FORM" target="_blank" class="btn-benevole">🌟 Rejoindre l’équipe</a>
   </section>
 
   <!-- Footer -->
@@ -257,3 +293,4 @@
 
 </body>
 </html>
+
