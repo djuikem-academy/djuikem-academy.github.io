@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nos activités — Djuikem Academy</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Open+Sans&display=swap" rel="stylesheet">
+
+  <style>
+    /* --- Hero spécifique à la page activités --- */
+    .hero {
+      background: 
+        linear-gradient(rgba(125,60,152,0.75), rgba(125,60,152,0.75)),
+        url('images/hero-activites.jpg') center/cover no-repeat;
+      color: white;
+      text-align: center;
+      padding: 100px 20px;
+      min-height: 400px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      animation: fadeIn 1.5s ease-in;
+    }
+
+    .hero-text {
+      max-width: 700px;
+      margin: 0 auto;
+      backdrop-filter: blur(3px);
+      animation: slideUp 1.2s ease-out;
+    }
+
+    /* --- Animation --- */
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    @keyframes slideUp {
+      from { transform: translateY(30px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+
+    /* --- Section webinaire --- */
+    #webinaire {
+      animation: fadeIn 1.8s ease-in;
+    }
+
+    .webinaire {
+      background-color: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      padding: 30px;
+      margin-top: 30px;
+      text-align: left;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .webinaire:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 16px rgba(125,60,152,0.2);
+    }
+
+    .webinaire h3 {
+      color: var(--violet);
+      margin-bottom: 10px;
+    }
+
+    .webinaire p {
+      line-height: 1.6;
+      margin-bottom: 15px;
+    }
+
+    .btn-inscription {
+      background-color: var(--doré);
+      color: var(--gris);
+      padding: 12px 28px;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: 600;
+      display: inline-block;
+      transition: all 0.3s ease;
+    }
+
+    .btn-inscription:hover {
+      background-color: #b7950b;
+      transform: translateY(-4px);
+    }
+
+    /* --- Section à venir --- */
+    .section.light {
+      animation: fadeIn 2s ease-in;
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="container">
+      <h1 class="logo">Djuikem Academy</h1>
+      <nav>
+        <ul>
+          <li><a href="index.html#accueil">Accueil</a></li>
+          <li><a href="index.html#missions">Missions</a></li>
+          <li><a href="activites.html" class="active">Activités</a></li>
+          <li><a href="impact.html">Impact</a></li>
+          <li><a href="index.html#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Section Hero -->
+  <section class="hero">
+    <div class="hero-text">
+      <h2>Nos activités éducatives 🌟</h2>
+      <p>Des expériences interactives pour apprendre, rêver et s’inspirer à travers les mathématiques et les sciences.</p>
+    </div>
+  </section>
+
+  <!-- Section Webinaire -->
+  <section id="webinaire" class="section">
+    <h2>🎥 Webinaire : Les pionnières des sciences</h2>
+    <p>
+      Ce webinaire est conçu pour les enfants de 8 à 14 ans, mais aussi pour leurs parents curieux.  
+      Ensemble, ils découvrent comment des femmes extraordinaires ont marqué l’histoire de la science
+      et comment la curiosité peut transformer une vie.
+    </p>
+
+    <div class="webinaire">
+      <h3>Quand la curiosité mène jusqu’aux étoiles ✨</h3>
+      <p>
+        <strong>Clotilde Djuikem</strong> vous embarque dans un voyage inspirant à travers le temps et les étoiles.  
+        Avec des histoires vraies, des jeux interactifs et des mini-défis mathématiques, les enfants découvrent
+        la beauté de la science sous un nouveau jour.
+      </p>
+
+      <ul style="line-height:1.8;">
+        <li>🧠 Pour les enfants : ateliers interactifs et quiz ludiques</li>
+        <li>👨‍👩‍👧 Pour les parents : conseils pour nourrir la curiosité scientifique</li>
+        <li>🌍 En ligne, gratuit sur inscription</li>
+      </ul>
+
+      <a href="https://forms.gle/TON_LIEN_GOOGLE_FORM" class="btn-inscription" target="_blank" rel="noopener noreferrer">
+        💫 Je veux inscrire mon enfant
+      </a>
+    </div>
+  </section>
+
+  <!-- Section à venir -->
+  <section class="section light">
+    <h2>🔜 Activités à venir</h2>
+    <p>
+      D’autres aventures scientifiques arrivent bientôt : <br>
+      <strong>Les mathématiques au quotidien</strong>, <strong>Atelier sur la gravité</strong>,
+      et <strong>Défi logique en famille</strong> !
+    </p>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 Djuikem Academy — Inspirer • Innover • Orienter</p>
+  </footer>
+
+</body>
+</html>
