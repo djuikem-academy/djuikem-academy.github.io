@@ -148,29 +148,23 @@ nav a:hover {
   box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
 
-/* --- Section Impact horizontale (bulles + images côte à côte) --- */
+/* --- Section Impact horizontale centrée --- */
 .impact-horizontal {
   display: flex;
-  justify-content: space-between; /* espace bien les deux blocs */
-  align-items: flex-start;
-  flex-wrap: nowrap; /* ← empêche le passage en colonne */
-  gap: 60px;
+  flex-direction: column; /* on empile bulles puis images */
+  align-items: center;
+  text-align: center;
+  gap: 25px;
   margin-top: 30px;
 }
-/* Donne la même largeur à chaque côté */
-.impact-bubbles,
-.gallery-mini {
-  flex: 1;
-}
 
-
-/* --- Colonne gauche : bulles --- */
+/* Ligne des bulles */
 .impact-bubbles {
   display: flex;
-  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap; /* pour adapter sur petit écran */
   gap: 15px;
-  align-items: flex-start;
-  flex: 1 1 300px;
 }
 
 .bubble {
@@ -178,10 +172,9 @@ nav a:hover {
   color: white;
   font-weight: 600;
   border-radius: 50px;
-  padding: 0.9rem 1.4rem;
+  padding: 0.8rem 1.3rem;
   box-shadow: 0 4px 10px rgba(0,0,0,0.1);
   transition: transform 0.3s, background-color 0.3s;
-  text-align: left;
 }
 
 .bubble:hover {
@@ -189,17 +182,17 @@ nav a:hover {
   background: var(--violet);
 }
 
-/* --- Colonne droite : mini-galerie (en ligne) --- */
+/* Ligne des images */
 .gallery-mini {
   display: flex;
   justify-content: center;
   align-items: flex-start;
-  gap: 15px;
-  flex: 1 1 300px;
+  gap: 20px;
+  flex-wrap: wrap;
 }
 
 .gallery-mini figure {
-  width: 100px;
+  width: 120px;
   text-align: center;
 }
 
@@ -217,10 +210,11 @@ nav a:hover {
 
 .gallery-mini figcaption {
   margin-top: 5px;
-  font-size: 0.8em;
+  font-size: 0.85em;
   font-weight: 600;
   color: var(--violet);
 }
+
 
 /* --- Contact --- */
 .socials a {
