@@ -151,12 +151,18 @@ nav a:hover {
 /* --- Section Impact horizontale (bulles + images côte à côte) --- */
 .impact-horizontal {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between; /* espace bien les deux blocs */
   align-items: flex-start;
-  flex-wrap: wrap; /* repasse en colonne sur petit écran */
-  gap: 40px;
+  flex-wrap: nowrap; /* ← empêche le passage en colonne */
+  gap: 60px;
   margin-top: 30px;
 }
+/* Donne la même largeur à chaque côté */
+.impact-bubbles,
+.gallery-mini {
+  flex: 1;
+}
+
 
 /* --- Colonne gauche : bulles --- */
 .impact-bubbles {
