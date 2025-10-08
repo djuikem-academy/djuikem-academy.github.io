@@ -57,11 +57,12 @@ nav a:hover {
 
 /* --- Section Hero --- */
 .hero {
-  background: linear-gradient(rgba(125,60,152,0.85), rgba(125,60,152,0.85)),
-              url('images/math-bg.jpg') center/cover;
+  background: linear-gradient(rgba(125,60,152,0.75), rgba(125,60,152,0.75)),
+              url('images/djuikem-academy.svg') center/cover no-repeat;
   color: white;
   text-align: center;
-  padding: 60px 20px; /* réduit la hauteur */
+  padding: 80px 20px;
+  min-height: 1080px; /* assure une hauteur minimale équivalente */
 }
 
 .hero-text {
