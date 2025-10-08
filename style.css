@@ -195,36 +195,42 @@ nav a:hover {
   to { opacity: 1; transform: translateY(0); }
 }
 
-/* --- Colonne droite : mini galerie --- */
+/* --- Mini-galerie : photos petites et sur la même ligne --- */
 .gallery-mini {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 20px;
-  flex: 1 1 300px;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 12px;
+  margin-top: 15px;
+  flex-wrap: nowrap; /* empêche le retour à la ligne */
+  overflow-x: auto;  /* permet un défilement horizontal si trop large */
+  padding-bottom: 5px;
 }
 
 .gallery-mini figure {
-  width: 180px;
+  width: 90px; /* taille réduite */
   text-align: center;
+  flex-shrink: 0;
 }
 
 .gallery-mini img {
   width: 100%;
-  border-radius: 12px;
-  box-shadow: 0 3px 10px rgba(0,0,0,0.15);
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
   transition: transform 0.3s;
 }
 
 .gallery-mini img:hover {
-  transform: scale(1.05);
+  transform: scale(1.07);
 }
 
 .gallery-mini figcaption {
-  margin-top: 8px;
+  margin-top: 4px;
+  font-size: 0.8em;
   font-weight: 600;
   color: var(--violet);
 }
+
 
 /* --- Bouton de lien vers la page d’impact détaillée --- */
 #impact-preview .btn {
