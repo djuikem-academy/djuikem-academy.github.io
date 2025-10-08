@@ -55,20 +55,26 @@ nav a:hover {
   color: var(--doré);
 }
 
-/* --- Section Hero --- */
+/* --- Section Hero (bannière SVG en fond) --- */
 .hero {
-  background: linear-gradient(rgba(125,60,152,0.75), rgba(125,60,152,0.75)),
-              url('images/djuikem-academy.svg') center/cover no-repeat;
+  background: 
+    linear-gradient(rgba(125,60,152,0.75), rgba(125,60,152,0.75)), /* voile violet */
+    url('images/djuikem-academy.svg') center/cover no-repeat;       /* ton SVG */
   color: white;
   text-align: center;
-  padding: 80px 20px;
-  min-height: 1080px; /* assure une hauteur minimale équivalente */
+  padding: 120px 20px;   /* hauteur de la bannière */
+  min-height: 600px;     /* fixe la hauteur visible */
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .hero-text {
   max-width: 800px;
   margin: 0 auto;
+  backdrop-filter: blur(3px); /* lisibilité du texte */
 }
+
 
 .hero h2 {
   font-family: 'Poppins', sans-serif;
