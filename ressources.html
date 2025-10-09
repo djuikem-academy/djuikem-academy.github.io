@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ressources & Vulgarisation — Djuikem Academy</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    :root {
+      --violet: #7d3c98;
+      --jaune: #f4c542;
+      --gris: #333333;
+      --blanc: #ffffff;
+    }
+
+    body {
+      font-family: "Open Sans", sans-serif;
+      color: var(--gris);
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background: var(--violet);
+      color: var(--blanc);
+      padding: 15px 0;
+      text-align: center;
+    }
+
+    header .logo {
+      margin: 0;
+      font-size: 1.8em;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      padding: 0;
+      margin: 10px 0;
+    }
+
+    nav a {
+      color: var(--blanc);
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    nav a.active {
+      text-decoration: underline;
+    }
+
+    .hero {
+      background: 
+        linear-gradient(rgba(125,60,152,0.75), rgba(125,60,152,0.75)),
+        url('images/hero-ressources.jpg') center/cover no-repeat;
+      color: var(--blanc);
+      text-align: center;
+      padding: 50px 20px;
+    }
+
+    .hero-text h2 {
+      margin: 0;
+      font-size: 2.5em;
+    }
+
+    .hero-text p {
+      margin-top: 15px;
+      font-size: 1.2em;
+    }
+
+    .section {
+      padding: 40px 20px;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .section h3 {
+      font-size: 1.8em;
+      margin-bottom: 20px;
+      display: inline-block;
+      background-color: var(--jaune);
+      color: var(--gris);
+      padding: 10px 20px;
+      border-radius: 30px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      animation: pop 0.8s ease;
+    }
+
+    @keyframes pop {
+      from {
+        transform: scale(0.9);
+        opacity: 0.7;
+      }
+      to {
+        transform: scale(1);
+        opacity: 1;
+      }
+    }
+
+    .resources-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 25px;
+      margin-top: 30px;
+    }
+
+    .resource-card {
+      background-color: var(--blanc);
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      overflow: hidden;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .resource-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    }
+
+    .resource-card .card-content {
+      padding: 20px;
+    }
+
+    .resource-card .card-content a {
+      text-decoration: none;
+      color: var(--violet);
+      font-weight: 600;
+    }
+
+    .resource-card .card-content p {
+      margin-top: 10px;
+      font-size: 0.95em;
+      line-height: 1.5;
+    }
+
+    /* Section vulgarisation */
+    .vulgarisation {
+      margin-top: 60px;
+    }
+
+    .vulgarisation .item {
+      margin-bottom: 30px;
+    }
+
+    .vulgarisation .item h4 {
+      margin: 0;
+      font-size: 1.4em;
+      background-color: var(--violet);
+      color: var(--blanc);
+      padding: 8px 15px;
+      border-radius: 20px;
+      display: inline-block;
+      animation: pop 0.8s ease;
+    }
+
+    .vulgarisation .item p {
+      margin-top: 8px;
+      line-height: 1.6;
+    }
+
+    footer {
+      text-align: center;
+      padding: 25px 0;
+      background-color: #f0f0f0;
+      color: var(--gris);
+      margin-top: 60px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <div class="container">
+      <h1 class="logo">Djuikem Academy</h1>
+      <nav>
+        <ul>
+          <li><a href="index.html">Accueil</a></li>
+          <li><a href="activites.html">Activités</a></li>
+          <li><a href="ressources.html" class="active">Ressources</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="hero-text">
+      <h2>📚 Ressources & Vulgarisation</h2>
+      <p>Tous nos documents, supports et astuces pour partager les sciences autrement.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <h3>Documents d’inspiration</h3>
+    <div class="resources-grid">
+      <div class="resource-card">
+        <div class="card-content">
+          <a href="https://cdjuikem.github.io/pdfs/outreach/Inspiration_8eme.pdf" target="_blank">
+            Inspiration 8ème
+          </a>
+          <p>Document d’inspiration pour le niveau 8ème — téléchargement en PDF.</p>
+        </div>
+      </div>
+      <!-- Ajoute d’autres cartes pour 11ème, 12ème, etc. -->
+    </div>
+
+    <h3 style="margin-top: 60px;">Livres & Publications</h3>
+    <div class="resources-grid">
+      <div class="resource-card">
+        <div class="card-content">
+          <a href="https://cdjuikem.github.io/pdfs/outreach/Livres_100_Applications.pdf" target="_blank">
+            100 applications concrètes des mathématiques
+          </a>
+          <p>La base des IA — avril 2025</p>
+        </div>
+      </div>
+      <!-- autres livres ici -->
+    </div>
+
+    <div class="vulgarisation">
+      <h3 style="margin-top: 60px;">Comment vulgariser ?</h3>
+
+      <div class="item">
+        <h4>1. Connaître son public</h4>
+        <p>
+          Pour bien vulgariser un concept scientifique, commence par te demander : à qui t’adresses-tu ? 
+          Enfants, adolescents, adultes ? Chaque groupe a ses intérêts et son vocabulaire.
+        </p>
+      </div>
+
+      <div class="item">
+        <h4>2. Utiliser des analogies parlantes</h4>
+        <p>
+          Comparer une idée abstraite à quelque chose de concret (un ballon pour l’atmosphère, des billes pour les atomes...) rend l’information plus accessible.
+        </p>
+      </div>
+
+      <div class="item">
+        <h4>3. Illustrer avec des images simples</h4>
+        <p>
+          Une image, un graphique clair ou un schéma minimal peut valoir mille mots. Garde les illustrations simples et pertinentes.
+        </p>
+      </div>
+
+      <div class="item">
+        <h4>4. Raconter une histoire</h4>
+        <p>
+          Introduis les concepts via une anecdote ou un récit — cela capte l’attention et rend le savoir mémorable.
+        </p>
+      </div>
+
+      <!-- tu peux ajouter d'autres conseils -->
+    </div>
+
+  </section>
+
+  <footer>
+    <p>© 2025 Djuikem Academy — Inspirer • Innover • Orienter</p>
+  </footer>
+
+</body>
+</html>
