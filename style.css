@@ -157,6 +157,33 @@ nav a:hover {
   box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
 
+/* --- Bulle Date --- */
+.date-bulle {
+  display: inline-block;
+  background-color: #f4c542;         /* jaune doré */
+  color: #3a2c00;                    /* texte brun doux pour contraste */
+  font-weight: 600;
+  font-size: 1.1em;
+  padding: 10px 20px;
+  border-radius: 30px;               /* arrondi style bulle */
+  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+  margin: 15px auto 25px auto;
+  text-align: center;
+  animation: pulse 3s infinite ease-in-out;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+  }
+  50% {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.25);
+  }
+}
+
+
 
 /* --- Intervenantes --- */
 .photo-intervenant {
