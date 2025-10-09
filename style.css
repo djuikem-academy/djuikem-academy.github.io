@@ -157,6 +157,23 @@ nav a:hover {
   box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
 
+
+/* --- Intervenantes --- */
+.photo-intervenant {
+  text-align: center;
+  margin: 30px 0;
+}
+
+.photo-intervenant img {
+  width: 160px;              /* taille ajustable */
+  height: 160px;
+  object-fit: cover;          /* garde la photo bien cadrée */
+  border-radius: 50%;         /* rend la photo parfaitement ronde */
+  border: 4px solid #7d3c98;  /* joli contour violet Djuikem Academy */
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+
 /* --- Section Impact horizontale centrée --- */
 .impact-horizontal {
   display: flex;
