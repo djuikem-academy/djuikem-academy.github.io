@@ -20,7 +20,7 @@ header {
   background: 
     linear-gradient(rgba(125,60,152,0.9), rgba(125,60,152,0.9)), 
     url('images/djuikem-academy.png') center/cover no-repeat;
- /* background-color: var(--violet);*/
+ * background-color: var(--blanc);
   color: white;
   padding: 15px 0;
   box-shadow: 0 2px 6px rgba(0,0,0,0.2);
