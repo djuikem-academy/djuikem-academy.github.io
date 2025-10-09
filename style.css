@@ -65,8 +65,8 @@ nav a:hover {
   background: linear-gradient(135deg, #7D3C98 0%, #9B59B6 100%);
   color: white;
   text-align: center;
-  padding: 60px 20px;      /* ← réduit la hauteur */
-  min-height: 150px;       /* ← hauteur plus discrète */
+  padding: 30px 20px;      /* ← réduit la hauteur */
+  min-height: 100px;       /* ← hauteur plus discrète */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -80,14 +80,14 @@ nav a:hover {
 
 .hero h2 {
   font-family: 'Poppins', sans-serif;
-  font-size: 1.8em;
+  font-size: 1.6em;
   font-weight: 600;
   margin-bottom: 15px;
 }
 
 .hero p {
   font-size: 1.1em;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
   line-height: 1.5;
 }
 
