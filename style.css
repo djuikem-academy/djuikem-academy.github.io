@@ -18,7 +18,7 @@ body {
 /* --- Header --- */
 header {
   background: 
-    linear-gradient(rgba(125,60,152,0.9), rgba(125,60,152,0.9)), 
+    linear-gradient(rgba(125,60,152,0.2), rgba(125,60,152,0.2), 
     url('images/djuikem-academy.png') center/cover no-repeat;
   background-color: var(--blanc);
   color: white;
