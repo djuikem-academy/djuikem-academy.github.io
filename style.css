@@ -65,8 +65,8 @@ nav a:hover {
   background: linear-gradient(135deg, #7D3C98 0%, #9B59B6 100%);
   color: white;
   text-align: center;
-  padding: 30px 20px;      /* ← réduit la hauteur */
-  min-height: 100px;       /* ← hauteur plus discrète */
+  padding: 25px 20px;      /* ← réduit la hauteur */
+  min-height: 80px;       /* ← hauteur plus discrète */
   display: flex;
   justify-content: center;
   align-items: center;
